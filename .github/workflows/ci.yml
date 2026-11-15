@@ -1,0 +1,23 @@
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    container: ros:jazzy
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        shell: bash
+        run: |
+          source /opt/ros/jazzy/setup.bash
+          apt-get update -qq && apt-get install -y -qq python3-pytest >/dev/null
+          colcon build --packages-select aisle_driver
+      - name: Test
+        shell: bash
+        run: |
+          source /opt/ros/jazzy/setup.bash
+          colcon test --packages-select aisle_driver --event-handlers console_direct+
+          colcon test-result --verbose
