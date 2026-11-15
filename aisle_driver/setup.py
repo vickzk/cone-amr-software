@@ -9,6 +9,7 @@ setup(
         ("share/aisle_driver", ["package.xml"]),
     ],
     install_requires=["setuptools"],
+    tests_require=["pytest"],
     zip_safe=True,
     entry_points={"console_scripts": ["drive_aisle = aisle_driver.drive_aisle:main"]},
 )
