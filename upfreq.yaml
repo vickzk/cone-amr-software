@@ -1,0 +1,12 @@
+format: upfreq.urs/1
+combos:
+- name: cone-transfer-amr-in-textile-mill
+  twin:
+    name: cone-transfer-amr
+    commit: 51cbc48
+  world:
+    name: textile-mill
+    commit: 3cb0683
+  last_used: '2026-11-15'
+  spawn:
+    point: west-dock
