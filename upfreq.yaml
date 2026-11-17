@@ -1,5 +1,15 @@
 format: upfreq.urs/1
 combos:
+- name: mir-ur5e-painter-in-paint-shop
+  twin:
+    name: mir-ur5e-painter
+    commit: 695643f
+  world:
+    name: paint-shop
+    commit: 33f9a6f
+  last_used: '2026-11-17'
+  spawn:
+    point: door
 - name: cone-transfer-amr-in-textile-mill
   twin:
     name: cone-transfer-amr
